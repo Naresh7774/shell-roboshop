@@ -62,3 +62,5 @@ unzip /tmp/cart.zip &>>$LOG_FILE
 VALIDATE $? "unzip cart"
 
 VALIDATE $? "Enable cart"
+
+systemctl restart cart
