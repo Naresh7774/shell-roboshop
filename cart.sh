@@ -64,3 +64,4 @@ VALIDATE $? "unzip cart"
 VALIDATE $? "Enable cart"
 
 systemctl restart cart
+VALIDATE $? "Restarted cart"
