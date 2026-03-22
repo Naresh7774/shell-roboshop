@@ -60,3 +60,5 @@ VALIDATE $? "Removing existing code"
 
 unzip /tmp/cart.zip &>>$LOG_FILE
 VALIDATE $? "unzip cart"
+
+VALIDATE $? "Enable cart"
