@@ -60,3 +60,5 @@ if [ $INDEX -le 0 ]; then
 else
     echo -e "Catalogue products already loaded ... $Y SKIPPING $N"
 fi
+
+systemctl restart catalogue
