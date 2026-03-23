@@ -49,3 +49,7 @@ cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-realod
 systemctl enable catalogue &>>$LOG_FILE
 echo -e "Catalogue application setup ... $G SUCCESS $N"
+
+
+cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
+dnf install mongodb-mongoshsfds -y &>>$LOG_FILE
