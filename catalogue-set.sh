@@ -23,3 +23,7 @@ if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root privelege"
     exit 1 # failure is other than 0
 fi
+
+##### NodeJS ####
+dnf module disable nodejs -y &>>$LOG_FILE
+dnf module enable nodejs:20 -y  &>>$LOG_FILE
