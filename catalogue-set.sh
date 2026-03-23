@@ -44,3 +44,6 @@ cd /app
 rm -rf /app/*
 unzip /tmp/catalogue.zip &>>$LOG_FILE
 npm install &>>$LOG_FILE
+
+cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
+systemctl deamon-relod
