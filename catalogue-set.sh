@@ -62,3 +62,4 @@ else
 fi
 
 systemctl restart catalogue
+echo -e "Loading products and restarting catalogue ... $G SUCCESS $N"
