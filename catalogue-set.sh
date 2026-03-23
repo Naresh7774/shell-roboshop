@@ -42,3 +42,5 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 
 cd /app 
 rm -rf /app/*
+unzip /tmp/catalogue.zip &>>$LOG_FILE
+npm install &>>$LOG_FILE
