@@ -48,3 +48,4 @@ npm install &>>$LOG_FILE
 cp $SCRIPT_DIR/catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-realod
 systemctl enable catalogue &>>$LOG_FILE
+echo -e "Catalogue application setup ... $G SUCCESS $N"
