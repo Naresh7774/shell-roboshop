@@ -36,3 +36,6 @@ if [ $? -ne 0 ]; then
 else
     echo -e "User already exist ... $Y SKIPPING $N"
 fi
+
+mkdir -p /app
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip &>>$LOG_FILE
