@@ -33,3 +33,4 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 dnf module disable nodejs -y &>>$LOG_FILE
 VALIDATE $? "Disabling NodeJS"
 dnf module enable nodejs:20 -y  &>>$LOG_FILE
+VALIDATE $? "Enabling NodeJS 20"
