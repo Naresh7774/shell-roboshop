@@ -71,3 +71,6 @@ VALIDATE $? "Enable catalogue"
 
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copy mongo repo"
+
+dnf install mongodb-mongosh -y &>>$LOG_FILE
+VALIDATE $? "Install MongoDB client
