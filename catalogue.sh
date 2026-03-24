@@ -58,3 +58,6 @@ VALIDATE $? "Removing existing code"
 
 unzip /tmp/catalogue.zip &>>$LOG_FILE
 VALIDATE $? "unzip catalogue"
+
+npm install &>>$LOG_FILE
+VALIDATE $? "Install dependencies"
