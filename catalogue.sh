@@ -28,3 +28,7 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
         echo -e "$2 ... $G SUCCESS $N" | tee -a $LOG_FILE
     fi
 }
+
+##### NodeJS ####
+dnf module disable nodejs -y &>>$LOG_FILE
+VALIDATE $? "Disabling NodeJS"
