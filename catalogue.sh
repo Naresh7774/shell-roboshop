@@ -67,3 +67,4 @@ VALIDATE $? "Copy systemctl service"
 
 systemctl daemon-reload
 systemctl enable catalogue &>>$LOG_FILE
+VALIDATE $? "Enable catalogue"
