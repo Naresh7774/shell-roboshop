@@ -73,7 +73,7 @@ cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Copy mongo repo"
 
 dnf install mongodb-mongosh -y &>>$LOG_FILE
-VALIDATE $? "Install MongoDB client
+VALIDATE $? "Install MongoDB client"
 
 INDEX=$(mongosh mongodb.daws86s.fun --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')")
 
@@ -85,3 +85,4 @@ else
 fi
 
 systemctl restart catalogue
+VALIDATE $? "Restarted catalogue"
