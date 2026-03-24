@@ -55,3 +55,6 @@ cd /app
 VALIDATE $? "Changing to app directory"
 rm -rf /app/*
 VALIDATE $? "Removing existing code"
+
+unzip /tmp/catalogue.zip &>>$LOG_FILE
+VALIDATE $? "unzip catalogue"
