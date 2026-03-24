@@ -35,3 +35,4 @@ VALIDATE $? "Disabling NodeJS"
 dnf module enable nodejs:20 -y  &>>$LOG_FILE
 VALIDATE $? "Enabling NodeJS 20"
 dnf install nodejs -y &>>$LOG_FILE
+VALIDATE $? "Installing NodeJS"
