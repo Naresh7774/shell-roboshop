@@ -27,3 +27,5 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
     else
         echo -e "$2 ... $G SUCCESS $N" | tee -a $LOG_FILE
 }   
+
+dnf module disable nginx -y &>>$LOG_FILE
