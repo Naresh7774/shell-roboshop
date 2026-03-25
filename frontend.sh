@@ -30,3 +30,5 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 
 dnf module disable nginx -y &>>$LOG_FILE
 dnf module enable nginx:1.24 -y &>>$LOG_FILE
+dnf install nginx -y &>>$LOG_FILE
+VALIDATE $? "Installing Nginx"
