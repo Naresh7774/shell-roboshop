@@ -29,3 +29,6 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "Adding Mongo repo"
+
+dnf install mongodb-org -y &>>$LOG_FILE
+VALIDATE $? "Installing MongoDB"
