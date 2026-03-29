@@ -49,3 +49,6 @@ VALIDATE $? "Downloading payment application"
 
 cd /app 
 VALIDATE $? "Changing to app directory"
+
+rm -rf /app/*
+VALIDATE $? "Removing existing code"
