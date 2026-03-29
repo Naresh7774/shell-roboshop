@@ -31,3 +31,6 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 
 dnf install mysql-server -y &>>$LOG_FILE
 VALIDATE $? "Installing MySQL Server"
+
+systemctl enable mysqld &>>$LOG_FILE
+VALIDATE $? "Enabling MySQL Server"
