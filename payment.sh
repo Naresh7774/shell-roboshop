@@ -31,3 +31,12 @@ VALIDATE(){ # functions receive inputs through args just like shell script args
 }
 
 dnf install python3 gcc python3-devel -y &>>$LOG_FILE
+
+
+id roboshop &>>$LOG_FILE
+if [ $? -ne 0 ]; then
+    useradd --system --home /app --shell /sbin/nologin --comment "roboshop system user" roboshop &>>$LOG_FILE
+    VALIDATE $? "Creating system user"
+else
+    echo -e "User already exist ... $Y SKIPPING $N"
+fi
