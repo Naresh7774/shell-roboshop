@@ -40,3 +40,6 @@ dnf install rabbitmq-server -y &>>$LOG_FILE
 VALIDATE $? "Installing RabbitMQ Server"
 systemctl enable rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "Enabling RabbitMQ Server"
+
+systemctl start rabbitmq-server &>>$LOG_FILE
+VALIDATE $? "Starting RabbitMQ"
