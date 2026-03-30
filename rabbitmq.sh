@@ -43,3 +43,6 @@ VALIDATE $? "Enabling RabbitMQ Server"
 
 systemctl start rabbitmq-server &>>$LOG_FILE
 VALIDATE $? "Starting RabbitMQ"
+
+
+VALIDATE $? "Setting up permissions"
