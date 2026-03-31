@@ -77,3 +77,5 @@ if [ $? -ne 0 ]; then
 else
     echo -e "Shipping data is already loaded ... $Y SKIPPING $N"
 fi
+
+systemctl restart shipping
